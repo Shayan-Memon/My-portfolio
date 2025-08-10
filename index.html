@@ -63,19 +63,22 @@
 									</a>
 									<p>Unity | C# | Netcode for GameObjects | Unity Relay | Mobile Optimization
 
+
 Developed a lightweight, real-time multiplayer racing game inspired by the “mini-Asphalt” style, built entirely in Unity. Leveraged Netcode for GameObjects with Unity Relay for smooth online play, enabling players to join matches via join codes and race with physics-accurate cars. Implemented WheelColliders for realistic vehicle handling, complete with reverse lights (via Light Probes), engine sounds, and synchronized flame and smoke effects visible to all players in real time.
 
-Key gameplay features include:
 
-Lap tracking & win/lose states: Centralized game object logic ensures accurate race results across all clients — e.g., if an opponent finishes 3 laps, the player sees an immediate “You Lose” message.
+. Key gameplay features include:
 
-Mobile-first optimization: APK size reduced to just 49MB while retaining high visual fidelity and smooth performance.
+1- Lap tracking & win/lose states: Centralized game object logic ensures accurate race results across all clients — e.g., if an opponent finishes 3 laps, the player sees an immediate “You Lose” message.
 
-Camera & UI polish: Implemented smooth camera follow, countdown synchronization, and color-assigned cars for clear player differentiation.
+2- Mobile-first optimization: APK size reduced to just 49MB while retaining high visual fidelity and smooth performance.
 
-Multiplayer-aware respawn system: Designed to correctly reposition cars back onto the track for both local and remote players without desynchronization issues.
+3- Camera & UI polish: Implemented smooth camera follow, countdown synchronization, and color-assigned cars for clear player differentiation.
 
-Challenges & Solutions:
+4- Multiplayer-aware respawn system: Designed to correctly reposition cars back onto the track for both local and remote players without desynchronization issues.
+
+
+.Challenges & Solutions:
 
 Synchronizing visual effects: Integrated smoke, fire, and reverse light behaviors into a multiplayer-safe C# system, ensuring effects are triggered consistently and visible to all connected clients.
 

@@ -157,7 +157,51 @@ This project demonstrates expertise in <strong>architectural visualization, low-
 									<a href="#" class="video fit" onclick="event.preventDefault(); playVideo('videoPlayer4');">
 										<video id="videoPlayer4" src="videos/Boss_game.mp4" controls width="100%" height="auto"></video>
 									</a>
-									<p>A 2D physics-based simulation where two balls bounce around within the same circular boundary, both aiming for the same goal. The game uses vector mathematics and advanced collision detection to simulate realistic motion and interactions between the balls, creating a dynamic and unpredictable environment. Everything in the game is fully automated, with no player input required.</p>
+<p><strong>Technologies:</strong> Unity | C# | Procedural Generation | A* Pathfinding | Tile-based Grid | Particle Systems | URP | File I/O (leaderboard)</p>
+
+<h3>Auto Dungeon Generation Game — Overview</h3>
+<p>
+A procedurally generated dungeon crawler developed in Unity to demonstrate advanced gameplay systems, enemy AI, and a complete game loop (menus, leaderboard, death screen). 
+Each playthrough generates a unique dungeon (Castle or Desert theme) featuring lava lakes, quicksand, traps, dynamic weather effects, and five distinct enemy types — including a multi-phase boss appearing every three levels. 
+The game balances randomness with fairness using pathfinding, connectivity checks, and structured spawn rules, while delivering a polished experience with dynamic lighting, particle effects, and smooth camera work.
+</p>
+
+<h4>Core Systems</h4>
+<ul>
+  <li><strong>Procedural Map Generation:</strong> Creates themed dungeons with large rooms, corridors, traps, and environmental hazards. Uses BFS connectivity checks and a Minimum Spanning Tree (MST) for guaranteed navigable paths.</li>
+  <li><strong>Enemy AI:</strong> Five unique archetypes (Shooter, Assassin, Heavy, Summoner, Boss) each with tailored animations, attack patterns, and AI logic. Bosses spawn every 3 levels, introducing multi-phase combat.</li>
+  <li><strong>Player Abilities:</strong> Five unlockable skills (Circle Slash, Blink Step, Hammer Slam, Homing Arrows, Fireballs) with cooldowns, visual effects, and damage feedback.</li>
+  <li><strong>UI & Game Flow:</strong> Main menu, in-game HUD, minimap, death screen with name input, and persistent leaderboard stored via file I/O.</li>
+  <li><strong>Atmospheric Effects:</strong> Earthquakes, sandstorms, lava glow, and other effects created using Unity’s particle system, camera shake, and URP lighting.</li>
+</ul>
+
+<h4>Key Gameplay Features</h4>
+<ul>
+  <li>Fully randomized runs with fair enemy and trap distribution.</li>
+  <li>Chests every two levels containing unique, non-repeating upgrades.</li>
+  <li>Color-coded minimap with player orientation and enemy type markers.</li>
+  <li>Optimized rendering using camera frustum culling and efficient draw order for layered environments.</li>
+</ul>
+
+<h4>Technical Highlights</h4>
+<ul>
+  <li><strong>Optimized A* Pathfinding:</strong> Uses a line-of-sight shortcut before running A*, diagonal heuristics for natural movement, and recalculates paths only when necessary.</li>
+  <li><strong>Performance-focused Generation:</strong> Low-poly models and efficient instancing keep frame rates high, even with many enemies and effects active.</li>
+  <li><strong>Event-driven Effects:</strong> Particle systems and sound triggers activate only during relevant events (e.g., boss attacks, trap triggers, weather changes).</li>
+</ul>
+
+<h4>Challenges & Solutions</h4>
+<ul>
+  <li><strong>Ensuring playable maps:</strong> Random generation initially created unreachable zones; fixed by adding BFS checks and corridor carving to connect all areas.</li>
+  <li><strong>AI spawn balance:</strong> Summoners previously overwhelmed players; solved by capping their count and adjusting spawn probabilities per level.</li>
+  <li><strong>Rendering performance:</strong> Reduced particle lifetimes, batched similar effects, and updated only visible tiles/entities to maintain 60 FPS.</li>
+  <li><strong>Collision issues from dashing/knockback:</strong> Implemented position validation and snapping to prevent clipping through walls.</li>
+</ul>
+
+<p>
+This project showcases expertise in <strong>procedural generation, AI programming, optimization, game design, and Unity’s particle and lighting systems</strong> — delivering a highly replayable and technically polished gameplay experience.
+</p>
+
 								</article>
 								<article>
 									<header>

@@ -61,7 +61,29 @@
 									<a href="#" class="video fit" onclick="event.preventDefault(); playVideo('videoPlayer');">
 										<video id="videoPlayer" src="videos/3D MULTIPLAYER GAME-1.mp4" controls width="100%" height="auto"></video>
 									</a>
-									<p>Built a lightweight multiplayer racing game in Unity that plays like a mini-Asphalt.Used Netcode for GameObjects with Unity Relay to sync players in real-time. Cars have real physics using WheelColliders, reverse lights, engine sounds, and even flame effects when accelerating. 📱 Fully mobile-optimized — APK size is just 49MB. Includes lap tracking, win/lose states, smooth camera follow, and countdown syncing. Players get color-assigned cars and a quick match UI via join codes. This was a fun project to show off fast-paced multiplayer in Unity, and it’s great for demoing game feel + netcode together.</p>
+									<p>Unity | C# | Netcode for GameObjects | Unity Relay | Mobile Optimization
+
+Developed a lightweight, real-time multiplayer racing game inspired by the “mini-Asphalt” style, built entirely in Unity. Leveraged Netcode for GameObjects with Unity Relay for smooth online play, enabling players to join matches via join codes and race with physics-accurate cars. Implemented WheelColliders for realistic vehicle handling, complete with reverse lights (via Light Probes), engine sounds, and synchronized flame and smoke effects visible to all players in real time.
+
+Key gameplay features include:
+
+Lap tracking & win/lose states: Centralized game object logic ensures accurate race results across all clients — e.g., if an opponent finishes 3 laps, the player sees an immediate “You Lose” message.
+
+Mobile-first optimization: APK size reduced to just 49MB while retaining high visual fidelity and smooth performance.
+
+Camera & UI polish: Implemented smooth camera follow, countdown synchronization, and color-assigned cars for clear player differentiation.
+
+Multiplayer-aware respawn system: Designed to correctly reposition cars back onto the track for both local and remote players without desynchronization issues.
+
+Challenges & Solutions:
+
+Synchronizing visual effects: Integrated smoke, fire, and reverse light behaviors into a multiplayer-safe C# system, ensuring effects are triggered consistently and visible to all connected clients.
+
+Cross-client race state management: Solved win/lose logic discrepancies by introducing a centralized race controller, ensuring race results remain accurate and synchronized for every player.
+
+Reliable respawn logic: Built a respawn handler that supports network ownership rules, preventing cars from spawning incorrectly in remote clients.
+
+This project demonstrates strong skills in multiplayer networking, performance optimization, gameplay systems engineering, and visual polish — combining technical problem-solving with a high-quality player experience.</p>
 								</article>
 								<article>
 									<header>
